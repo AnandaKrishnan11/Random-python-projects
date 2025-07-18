@@ -13,9 +13,10 @@ class Point:
 class Rectangle:
 
     def __init__(self):
-        self.x1, self.x2 = sorted(np.random.randint(1, 10, 2))
-        self.y1, self.y2 = sorted(np.random.randint(1, 10, 2))
+        self.x1, self.x2 = sorted(map(int,np.random.randint(1, 10, 2)))
+        self.y1, self.y2 = sorted(map(int,np.random.randint(1, 10, 2)))
     
+    @property
     def get_coordinates(self):
         print(f'The coordinates of the rectangle: {(self.x1,self.y1)} and {(self.x2,self.y2)}')
 
@@ -28,7 +29,7 @@ class Rectangle:
 def run_game():
     while True:
         rectangle = Rectangle()
-        rectangle.get_coordinates()
+        rectangle.get_coordinates
 
         try:
             x = int(input("Guess x coordinate: "))
@@ -51,4 +52,3 @@ def run_game():
 
 if __name__ == "__main__":
     run_game()
-
