@@ -28,7 +28,7 @@ class Rectangle:
 def run_game():
     while True:
         rectangle = Rectangle()
-        print(rectangle)
+        rectangle.get_coordinates()
 
         try:
             x = int(input("Guess x coordinate: "))
