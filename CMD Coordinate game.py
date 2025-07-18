@@ -1,4 +1,5 @@
 import numpy as np
+
 class Point:
 
     def __init__(self,x,y):
@@ -16,7 +17,7 @@ class Rectangle:
         self.y1, self.y2 = sorted(np.random.randint(1, 10, 2))
     
     def get_coordinates(self):
-        print(f'The coordinates of the rectangle: {(self.x1,self.y1)} {(self.x2,self.y2)}')
+        print(f'The coordinates of the rectangle: {(self.x1,self.y1)} and {(self.x2,self.y2)}')
 
    
     def contains(self,point:Point):
@@ -30,8 +31,8 @@ def run_game():
         print(rectangle)
 
         try:
-            x = int(input("Enter x coordinate: "))
-            y = int(input("Enter y coordinate: "))
+            x = int(input("Guess x coordinate: "))
+            y = int(input("Guess y coordinate: "))
         except ValueError:
             print("Please enter valid integers.")
             continue
